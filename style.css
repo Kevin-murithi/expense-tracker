@@ -1,7 +1,7 @@
 body{
     font-family: Arial, Helvetica, sans-serif;
     margin:0;
-    background-color: rgb(2, 39, 39);
+    background-color: rgb(2, 15, 34);
     color: white;
 }
 .intro{
@@ -18,22 +18,35 @@ h1,h2{
     align-items: center;
     padding: 10px;
 }
+
 .input-section label{
     font-weight: bold;
     margin-right: 10px;
 }
+
+.input-section input {
+    border-radius: 5px;
+    height: 30px;
+}
+
 .input-section input[type="number"], .input-section input[type="date"]{
     padding: 5px;
     margin-right: 10px;
+    
 }
 .input-section button{
-    padding: 5px 10px;
+    padding: 5px 25px;
     background-color: rgb(238, 9, 9);
     color:white;
     border: none;
     border-radius: 4px;
     cursor: pointer;
 }
+
+.input-section button:hover {
+    background-color:rgba(238, 9, 9,0.5) ;
+}
+
 .expenses-list{
     margin: 20px;
 }
@@ -49,7 +62,7 @@ th,td{
 
 }
 th{
-    background-color: rgb(100, 101, 53);
+    background-color: rgb(5, 90, 201);
     color: rgb(241, 237, 237);
 }
 tfoot td{
@@ -62,4 +75,47 @@ tfoot td{
     border: none;
     border-radius: 4px;
     cursor: pointer;
+}
+
+.delete-btn:hover{
+    background-color: rgba(238, 9, 9, 0.5);
+}
+
+#category-select{
+    width: 20%;
+    border-radius: 5px;
+    height: 30px;
+    text-align: center;
+}
+
+#total-amount{
+    background-color: rgb(5, 90, 201);
+}
+
+@media screen and (max-width:757px) {
+    h1{
+        font-size: 1.2em;
+        margin: 15px;
+    }
+    .input-section{
+        flex-direction:column;
+        padding:10px 30px;
+        align-items: flex-start;        
+    }
+    .input-section input[type="number"], .input-section input[type="date"]{
+        width: 95%;
+
+    }
+    .input-section button{
+        width: 60px;
+        margin-top:10px ;
+        padding-top: 10px;
+    }
+    #category-select{
+        width: 98%;
+    }
+     
+    .expenses-list{
+        margin: 2px;
+    }
 }
